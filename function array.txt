@@ -1,0 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int addition(){
+     int c;
+    c=a+b;
+    return c;
+}
+int main() {
+    // Write C code here
+   int x,y,z;
+   scanf("%d",&x.&y);
+   z=addition(x,y);
+   printf("%d",z);
+    return 0;
+}
