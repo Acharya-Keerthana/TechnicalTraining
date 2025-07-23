@@ -1,0 +1,71 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int balance=1000,pin=1234,ch;
+    int p,amt,amtw,np,cnp;
+    printf("Welcome please choose your action:");
+    printf("\n 1. deposit \n 2.withdraw \n 3. balance check \n 4. change pin");
+    printf("\n Enter you choice:");
+    scanf("%d",&ch);
+    switch(ch){
+        case 1:
+        printf("Enter the pin:");
+        scanf("%d",&p);
+        if(pin == p){
+            printf("Enter the amount to deposit:");
+            scanf("%d",&amt);
+            balance+=amt;
+            printf("Your current balance is%d",balance);
+        }else{printf("Wrong pin");}
+        break;
+        case 2:
+            printf("Enter the pin:");
+            scanf("%d",&p);
+            if(pin ==p){
+                printf("Enter the amt to withdraw:");
+                scanf("%d",&amtw);
+                if(amtw<balance){
+                    balance-=amtw;
+                    printf("Your current balance is%d",balance);
+                }else{
+                    printf("insuffient balance");
+                }
+            }else{
+                printf("Please enter the valid pin");
+            }
+            break;
+            case 3:
+            printf("Enter the pin:");
+            scanf("%d",&p);
+            if(pin ==p){
+                printf("Your balance is%d",balance);
+            }else{
+                printf("Please enter the valid pin");
+            }
+            break;    
+            case 4:
+            printf("Enter the pin:");
+            scanf("%d",&p);
+            if(pin ==p){
+                printf("Enter the new pin:");
+                scanf("%d",&np);
+                printf("\n Enter the pin to confirm:");
+                scanf("%d",&cnp);
+                if(np==cnp){
+                    pin=np;
+                    printf("pin updated successfully");
+                }else{
+                    printf("pin does match please enter again");
+                }
+            }else{
+                printf("Please enter the valid pin");
+            }
+            break;
+            default:
+            printf("Enter the valid choice");
+            break;
+    }
+    return 0;
+}
