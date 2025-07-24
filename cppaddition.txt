@@ -1,0 +1,19 @@
+using namespace std;
+#include <iostream>
+
+int main()
+{
+    int a,b,c,s,m;
+    float d;
+    cin>>a>>b;
+    c=a+b;
+    s=a-b;
+    m=a*b;
+    d=(float) a/b;
+    cout<<"The add of the two nums= "<<c;
+    cout<<"\nThe add of the two nums= "<<s;
+    cout<<"\nThe add of the two nums= "<<m;
+    cout<<"\nThe add of the two nums= "<<d;
+
+    return 0;
+}
